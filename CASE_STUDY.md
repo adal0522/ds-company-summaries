@@ -6,7 +6,9 @@ A good summary helps a reviewer decide which potential suppliers or partners to 
 
 ## What I built
 
-I built a Python baseline for all 50 companies, then used the same prompt and company records with two models on Groq. The saved outputs are GPT-OSS 120B in [groq-v1](summaries/groq-v1.jsonl) and GPT-OSS 20B in [groq-v2](summaries/groq-v2.jsonl). I cache the raw responses so the script can reuse a valid response for the same model, prompt, and company record without spending more API tokens. The models calculate the figures from the raw records, and the script checks the summary format before writing JSONL for the viewer.
+I built a Python baseline for all 50 companies and a reusable prompt template for the LLM summaries. The template defines the same five sections and rating rules for every run. I can switch models or providers with `--model` and `--provider` while keeping the prompt and company records the same.
+
+I ran the template with two models on Groq. The saved outputs are GPT-OSS 120B in [groq-v1](summaries/groq-v1.jsonl) and GPT-OSS 20B in [groq-v2](summaries/groq-v2.jsonl). I cache the raw responses so the script can reuse a valid response for the same model, prompt, and company record without spending more API tokens. The models calculate the figures from the raw records, and the script checks the summary format before writing JSONL for the viewer.
 
 The 1–5 score prioritises further supplier review. A strong candidate scores 5, missing financials alone can warrant 3, and a company in winding up scores 1. I used Codex to help refactor the Python code, check the saved outputs, and draft this report.
 
@@ -29,4 +31,8 @@ Ratings agreed on six of eight companies. The spot checks found numerical and la
 
 ## What I will do next,and how I improve it
 
-I would try models from other providers. After each prompt change, I would rerun the same eight cases and check for factual errors and omissions. I would then test the revised prompt on a fresh sample.
+My first priority would be to make the summaries more reliable. I would use Python to calculate net debt and litigation totals, then pass those figures to the model. I would also flag unusual audit opinions so they are easier to include in the summary.
+
+I would add examples to the rating rubric for companies with mixed signals. For example, Kirana Everbright Packaging had falling revenue but positive free cash flow, and the two models gave it 2/5 and 4/5. I would clarify how to weigh those signals and add a check that each score uses the correct label.
+
+I would try models from other providers using the same prompt and eight company records. After each prompt change, I would rerun those cases and track factual errors, important omissions, and rating inconsistencies. I would then test the revised prompt on a fresh sample to see whether the improvements hold.
