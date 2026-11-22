@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "fingerprint": "4b09240c2596da697956bb788490dae3ea36953747610d86c2ff45eb6a12efb8",
+  "response": {
+    "id": "chatcmpl-dc1bd083-60cf-44d2-9a9d-0ae185c8389a",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**Company:** Cahaya Golden Systems Sdn. Bhd. (Private limited company, incorporated 2019‑09‑29, currently winding up) operates in the Technology sector in Selangor, providing software development for small‑business accounting. Its share capital is RM2.5m.  \n\n**Director & Shareholder:** Three directors and three shareholders are recorded. The largest shareholder is Director 2, holding 52.17 % of the shares.  \n\n**Financials:** In FY 2024 revenue rose 2.5 % YoY to RM13,006,124, with a gross profit margin of 60.8 % and an operating profit margin of 14.8 %. Free cash flow fell to RM614.7k, while net debt increased to RM2.33m, indicating a shift from earlier positive cash generation.  \n\n**Litigation:** Eight defendant cases are on record, totalling RM6,823,500 in claim amounts. Four cases remain pending, one dismissed, one withdrawn, one judged, and one settled.  \n\n**Review Rating:** 1/5 — Very low review priority; the winding‑up status overrides other considerations, so further vetting is not a priority.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "We need produce 5 Markdown paragraphs with headings. Let's parse.\n\nCompany: name \"Cahaya Golden Systems Sdn. Bhd.\" no former names. Type: Private limited company. Incorporation date 2019-09-29. Status: Winding up. Industry: Technology. State: Selangor. Nature of business: Software development for small business accounting. Share capital 2500000 (RM2,500,000). Format share capital as RM2,500,000? The rules: Format ringgit compactly as RM, RMx.xk, or RMx.xxm. So 2,500,000 can be RM2,500,000 or RM2.5m. The rule says \"RMx.xk\" or \"RMx.xxm\". 2.5m. So RM2.5m.\n\nDirector & Shareholder: directors: 3. shareholders: 3. Largest shareholder: Director 2 52.17%. Format two decimal places: 52.17%. Use correct singular/plural: \"Three directors\" etc. \"Three shareholders\". \"Largest shareholder is Director 2 holding 52.17%\".\n\nFinancials: Need latest financial year: 2024. Prior year 2023. Compute YoY revenue growth: (13,006,124 - 12,693,512)/12,693,512*100. Let's calculate.\n\nRevenue 2024 = 13,006,124\nRevenue 2023 = 12,693,512\nDifference = 312,612\nDivide by 12,693,512 = 0.024635... *100 = 2.46% (rounded to one decimal? Use one decimal place for percentages. So 2.5% (one decimal). Actually 2.46 rounds to 2.5%.\n\nGross profit margin: grossProfit / revenue * 100. GrossProfit 2024: 7,911,140? Wait 7,911,140? Actually 7,911,140? Let's check: In 2024, grossProfit 7911140. revenue 13,006,124. margin = 7,911,140 /13,006,124 = 0.6083 (60.83%) which matches ratio. One decimal: 60.8%? Actually 60.83 rounds to 60.8%. Good.\n\nOperating profit margin: operatingProfit 1,922,281 / 13,006,124 = 0.1478 -> 14.78% -> 14.8% one decimal.\n\nFree cash flow: 2024 freeCashFlow 614,686 (from ratios). Use ringgit compact? 614,686 = RM614,686? Use RM614k? rule: RMx.xk. So 614686 ~ RM614.7k. Actually 614,686 rounds to 614.7k. Use two decimal maybe? Format ringgit compactly as RM, RMx.xk, or RMx.xxm. So 614.7k.\n\nNet debt: borrowings - cash. Borrowings 4,352,967; cash 2,022,216. Net debt = 4,352,967 - 2,022,216 = 2,330,751. That's positive debt. Format as RM2,330,751? Use RM2.3m? Let's round to nearest 0? We can represent as RM2,330,751. Or RM2.33m? But rule: \"RMx.xk or RMx.xxm\" maybe 2.33m. Use RM2.33m.\n\nDescribe growth: revenue up 2.5%, gross margin ~60.8% stable, operating margin up to 14.8%. Free cash flow positive but reduced from 1.3m to 0.6m (decrease). Net debt positive 2.33m.\n\nLitigation: Count all cases: 8 cases. All are defendant cases. Sum claim amounts: sum all claimAmount:\n\n- 40,100\n- 690,500\n- 98,000\n- 3,840,700\n- 606,600\n- 10,000\n- 1,165,200\n- 372,400\n\nLet's compute:\n\n40,100 + 690,500 = 730,600\n+98,000=828,600\n+3,840,700=4,669,300\n+606,600=5,275,900\n+10,000=5,285,900\n+1,165,200=6,451,100\n+372,400=6,823,500\n\nSo total claim amounts: RM6,823,500.\n\nAggregate statuses: Pending (cases 5? Let's count statuses: Pending 5? Actually list: pending for CASE-2025-2133, pending for CASE-2025-4000, dismissed for CASE-2025-5499, withdrawn for CASE-2024-3066, pending for CASE-2024-9442, judgment entered for CASE-2023-1186, pending for CASE-2023-1293, settled for CASE-2022-8597. So pending: 5 (2025-2133, 2025-4000, 2024-9442, 2023-1293, 2023-1186? Actually 1186 is judgment entered, not pending. So pending: 2025-2133, 2025-4000, 2024-9442, 2023-1293 = 4 pending. Wait check: 2024-3066 withdrawn. 2025-5499 dismissed. 2023-1186 judgment entered. So pending: 4. Others: dismissed, withdrawn, judgment entered, settled.\n\nNow Review Rating. Company status: Winding up => According to rubric, winding-up status takes priority, always 1/5. So rating 1/5 very low review priority. Provide label and one sentence: e.g., \"Due to the winding‑up status, the company is a low‑priority target for further review.\".\n\nMake sure to use 1/5 and label (Very low review priority). Provide sentence.\n\nFormatting: Use Markdown paragraphs each heading bold? Use headings? It says \"Return only five Markdown paragraphs with these headings, in this order:\" So headings likely like **Company:** etc. Each paragraph with heading and content. Use Markdown.\n\nUse one decimal place for percentages. So revenue growth 2.5%. Gross margin 60.8%. Operating margin 14.8%. Net debt: use RM2.33m. Free cash flow: RM614.7k.\n\nNow craft each paragraph.\n\nParagraph 1: Company details.\n\nParagraph 2: Director & Shareholder.\n\nParagraph 3: Financials.\n\nParagraph 4: Litigation.\n\nParagraph 5: Review Rating.\n\nCheck for any extra words. Use concise language.\n\nNow produce final."
+        }
+      }
+    ],
+    "created": 1795379133,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": "on_demand",
+    "system_fingerprint": "fp_80501ff3a1",
+    "usage": {
+      "completion_tokens": 1723,
+      "prompt_tokens": 3787,
+      "total_tokens": 5510,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1461,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 512,
+        "image_tokens": null,
+        "text_tokens": null
+      },
+      "queue_time": 0.049754738,
+      "prompt_time": 0.302202731,
+      "completion_time": 1.8785116849999999,
+      "total_time": 2.180714416
+    },
+    "usage_breakdown": null,
+    "x_groq": {
+      "id": "req_01m82eywfvezp8tnf4d7cvprqg",
+      "seed": 1531418707
+    }
+  }
+}

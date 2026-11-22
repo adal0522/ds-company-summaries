@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "fingerprint": "33248e59b9eb6b301eaba8c187914f1dad01a60af2498cffc1fae3c0a6860e55",
+  "response": {
+    "id": "chatcmpl-b8697c3e-919f-4a75-a6b8-a55f29e4e577",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**Company:** Teguh Bestari Learning Sdn. Bhd. – Private limited company, incorporated on 7 Dec 1991, currently **Active**. Operates in the **Education** industry in **Selangor**, providing “Tadika swasta dan taska di Johor Bahru”. Share capital is **RM2.5m**.  \n\n**Director & Shareholder:** The company has **2 directors** and **2 shareholders**. The largest shareholder is **Director 1** with **51.02 %** of the equity.  \n\n**Financials:** For the latest FY 2024, revenue reached **RM5.6m**, up **36.7 %** from FY 2023. Gross profit margin was **54.2 %** and operating profit margin **11.7 %**. Free cash flow was **RM357.8k** and net debt (borrowings less cash) stood at **RM1.9m**, indicating positive cash generation despite elevated leverage.  \n\n**Litigation:** No court cases were recorded.  \n\n**Review Rating:** **4/5 – High review priority**. The firm shows strong revenue growth, healthy margins and positive free cash flow, with no defendant litigation, though its net debt remains material.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "We need to produce five markdown paragraphs with headings: **Company:**, **Director & Shareholder:**, **Financials:**, **Litigation:**, **Review Rating:**.\n\nWe must calculate latest financial year: 2024. Need YoY revenue growth against immediately preceding year (2023). Compute: (5606840 - 4101556) / abs(4101556) *100. Let's calculate.\n\nDifference: 5606840 - 4101556 = 1505284. Divide by 4101556 ≈ 0.3671. *100 = 36.71%. One decimal place => 36.7%.\n\nGross profit margin: gross profit / revenue *100. Gross profit 3033663 / 5606840 = approx 0.5415? Actually given ratio 0.5411 (from ratios). We'll compute ourselves: 3033663/5606840 = 0.5415 approx. One decimal place => 54.2% (but need one decimal place). We'll compute precisely: 3033663 / 5606840 = 0.5415 -> 54.2%.\n\nOperating profit margin: operating profit 654407 / 5606840 = 0.1168 -> 11.7% (one decimal). Free cash flow: from statements freeCashFlow 357848. Format as RM357.8k? Need compact: RM357.8k (two decimal places for thousand? rule: RMx.xk). So RM357.8k.\n\nNet debt = borrowings - cash. Borrowings 2,654,552; cash 708,977 => net debt = 1,945,575. Format RM1.9m (RM1.9m). Use one decimal? Probably RM1.9m (since compact). Could also be RM1.95m but rule: RMx.xm. So RM1.9m.\n\nWe also have share capital: 2,500,000 => RM2.5m.\n\nDirectors count: 2. Shareholders count: 2. Largest shareholder: Director 1 with 51.02%.\n\nLitigation: cases array empty => No court cases were recorded.\n\nReview rating: Need to assess. Status active, financial performance positive (revenue growth 36.7% YoY, margins decent, positive free cash flow, net debt high but still positive cash flow; no defendant litigation). So high priority: 4/5 (high review priority). Because good but net debt high (2.6m borrowings, net debt 1.9m) but still positive. So 4/5.\n\nProvide rating sentence.\n\nNow format.\n\nParagraph 1: **Company:** include name, type, incorporation date, status, industry, state, nature of business, share capital. No former names.\n\nParagraph 2: **Director & Shareholder:** count etc.\n\nParagraph 3: **Financials:** mention FY2024 revenue RM5.6m, YoY growth 36.7%, gross profit margin 54.2%, operating profit margin 11.7%, free cash flow RM357.8k, net debt RM1.9m. Describe growth etc.\n\nParagraph 4: **Litigation:** No court cases...\n\nParagraph 5: **Review Rating:** 4/5 – High review priority. Explanation.\n\nMake sure each paragraph separate lines with heading bold.\n\nLet's craft."
+        }
+      }
+    ],
+    "created": 1795378860,
+    "model": "openai/gpt-oss-120b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": "on_demand",
+    "system_fingerprint": "fp_c3da0d4bb9",
+    "usage": {
+      "completion_tokens": 984,
+      "prompt_tokens": 3038,
+      "total_tokens": 4022,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 709,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 256,
+        "image_tokens": null,
+        "text_tokens": null
+      },
+      "queue_time": 0.156717433,
+      "prompt_time": 0.316542566,
+      "completion_time": 2.032460861,
+      "total_time": 2.349003427
+    },
+    "usage_breakdown": null,
+    "x_groq": {
+      "id": "req_01m82ephxbe09s4nxws7y4b91t",
+      "seed": 1532223431
+    }
+  }
+}

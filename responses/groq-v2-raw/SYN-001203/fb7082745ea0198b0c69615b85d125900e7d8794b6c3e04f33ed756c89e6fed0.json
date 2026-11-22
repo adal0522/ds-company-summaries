@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "fingerprint": "fb7082745ea0198b0c69615b85d125900e7d8794b6c3e04f33ed756c89e6fed0",
+  "response": {
+    "id": "chatcmpl-dac1a346-3a1a-4425-89a9-825bfd2dd269",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "## Company  \nPacific Seri Freight Sdn. Bhd. is a private limited company incorporated on 8 June 2007. The firm is currently active, operating in the logistics industry within Selangor, and specialises in cold chain transport and storage of frozen goods. Its share capital is RM5.0 m.\n\n## Director & Shareholder  \nThe company has two directors and three shareholders. The largest shareholder is Gemilang Holdings Sdn. Bhd., holding 70.00 % of the equity. The remaining shares are held by Director 2 (19.45 %) and Director 1 (10.55 %).\n\n## Financials  \nNo financial statements were provided for the latest year. Consequently, revenue growth, gross and operating profit margins, free cash flow, and net debt cannot be calculated from the supplied data.\n\n## Litigation  \nOne court case is recorded. The company acted as plaintiff in a breach‑of‑contract case (CASE‑2023‑0273) at the Magistrates’ Court (Selangor). The claim amount was RM22.5 k and the case status is Settled. There are no defendant cases.\n\n## Review Rating  \n**3/5 – Moderate review priority**  \nMissing financial data creates uncertainty, but the company’s active status and absence of defendant litigation reduce immediate risk concerns.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "We need to generate five Markdown paragraphs with headings. We need to use supplied record. Let's parse.\n\nCompany: name: Pacific Seri Freight Sdn. Bhd. No former names. Company type: Private limited company. Incorporation date: 2007-06-08. Current status: Active. Industry: Logistics. State: Selangor. Nature of business: Cold chain transport and storage of frozen goods. Share capital: 5,000,000. Format ringgit compactly? For share capital we can show RM5.0m? They didn't specify formatting for share capital, but likely RM5.0m.\n\nDirector & Shareholder: directors count 2. Shareholders count 3. Largest shareholder: Gemilang Holdings Sdn. Bhd. 70.00%.\n\nFinancials: \"years\" empty array. So no financial data. So we must say that financial data is absent. So we state: No financial data available.\n\nLitigation: cases count 1. All plaintiff cases: 1 case. Defendant cases: 0. Sum claim amounts: plaintiff 22,500.0. Defendant 0. Aggregate case statuses: \"Settled\". So status list? We can list Settled. So say: 1 case, plaintiff 1, defendant 0, claim amounts RM22.5k. Status: Settled.\n\nReview Rating: We need to decide. Since no financial data, but active status and no defendant litigation. According to rubric: missing financial info alone => 3/5. Also no material defendant litigation. So 3/5 moderate. Explanation: missing financial data leads to uncertainty.\n\nNow format. Use ringgit compact. 22,500.0 -> RM22.5k. For share capital: 5,000,000 -> RM5.0m. For percentages: 70.00%.\n\nUse one decimal place for financial percentages but we have none. Use two decimal places for shareholder percentages. So 70.00%.\n\nMake sure to have five paragraphs, each with heading.\n\nParagraph 1: Company. Include (formerly known as ...) but none. Include company type, incorporation date, current status, industry, state, nature of business, share capital. Use date maybe 2007-06-08. Use capital.\n\nParagraph 2: Director & Shareholder. Count directors 2, shareholders 3, largest shareholder Gemilang Holdings 70.00%. Use singular/plural wording.\n\nParagraph 3: Financials. Mention no financial data available. No revenue, no margins, no free cash flow, no net debt. State that.\n\nParagraph 4: Litigation. 1 case, plaintiff 1, defendant 0, claim amounts RM22.5k, status Settled.\n\nParagraph 5: Review Rating: 3/5, label \"Moderate review priority\", one sentence: Missing financial data limits assessment.\n\nLet's produce. Ensure headings in Markdown (#). Use bold? The heading style? They didn't specify, just headings. We'll use ##.\n\nLet's craft."
+        }
+      }
+    ],
+    "created": 1795379062,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": "on_demand",
+    "system_fingerprint": "fp_bb6a356524",
+    "usage": {
+      "completion_tokens": 903,
+      "prompt_tokens": 1164,
+      "total_tokens": 2067,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 622,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null
+      },
+      "prompt_tokens_details": null,
+      "queue_time": 0.367999452,
+      "prompt_time": 0.061291317,
+      "completion_time": 0.969029431,
+      "total_time": 1.030320748
+    },
+    "usage_breakdown": null,
+    "x_groq": {
+      "id": "req_01m82ewrjbe11aypk49n1d4mbq",
+      "seed": 658315079
+    }
+  }
+}

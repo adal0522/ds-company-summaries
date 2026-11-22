@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "fingerprint": "fd4879290d57cb64cb5644782dd2e76471c2e9a01a6f6fb3ac24209db1f0e3dd",
+  "response": {
+    "id": "chatcmpl-e5086a8c-6dba-4361-88e0-2240debaf596",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**Company:** Teguh Bestari Medical Sdn. Bhd. – a private limited company incorporated on 17 Oct 1988, currently active in Sabah’s healthcare sector as a dental clinic and orthodontic services provider. The company’s share capital stands at RM100 k and its total equity is RM614 k.\n\n**Director & Shareholder:** The board consists of two directors, and the shareholding structure is held by two individuals. Director 1 holds the largest stake of 63.91 % and Director 2 holds 36.09 %.\n\n**Financials:** In 2024 the company posted RM1.16 m in revenue, up 6.4 % from RM1.09 m the previous year. Gross profit margin fell slightly to 42.5 % and operating profit margin settled at 12.5 %. Free cash flow was RM144.60 k, while net debt (borrowings – cash) was RM411.84 k. Overall, revenue and margin trends are stable and cash generation remains positive.\n\n**Litigation:** Six court cases are recorded: one as defendant (claim RM310.60 k) and five as plaintiff (total claim RM4.92 m). Case outcomes include 3 judgments entered, 1 pending, 1 withdrawn, and 1 dismissed.\n\n**Review Rating:** 4 / 5 – High review priority. The firm shows consistent growth, healthy cash flow, and no material defendant litigation, but its moderate net debt warrants further assessment.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "We need to summarize in 5 markdown paragraphs with headings in order.\n\nWe need calculations:\n\nCompany: current name Teguh Bestari Medical Sdn. Bhd.; no former names. Type, incorporation, status, industry, state, nature, share capital. Share capital 100,000 (RM? Probably RM100k). Format compactly as RM. Use RM100k.\n\nDirector & Shareholder: directors count 2. shareholders count 2. Largest shareholder: Director 1 63.91% -> 63.91%. Use two decimal places. Format as \"63.91%\".\n\nFinancials: Latest financial year 2024. Compute YoY revenue growth vs 2023. Revenue 2024: 1,160,005. Revenue 2023: 1,090,307. Difference = 69,698. / 1,090,307 = 0.0639 => 6.4% (one decimal). Gross profit margin: grossProfit 492,533 / 1,160,005 = 0.4246 -> 42.5% (one decimal). Operating profit margin: 144,500 / 1,160,005 = 0.1246 -> 12.5%. Free cash flow: 144,597 (RM144.60k). Net debt: borrowings 471,172 - cash 59,334 = 411,838 -> RM411.84k.\n\nDescribe growth, decline, positive cash flow: revenue growth 6.4% yoy, margins stable. Free cash flow positive. Net debt high but less than borrowings.\n\nLitigation: count cases: 6 cases total. Count defendant cases: 1 (claim 310,600). Plaintiff cases: 5, claim amounts sum: 26,100 + 39,400 + 1,077,100 + 1,269,100 + 2,512,900 = let's compute: 26,100+39,400=65,500. +1,077,100=1,142,600. +1,269,100=2,411,700. +2,512,900=4,924,600. So total plaintiff claims 4,924,600.\n\nAggregate case statuses: list counts: Judgment entered: defendant 1 + plaintiff 2? Wait plaintiff statuses: Judgment entered 2 (CASE-2024-3897, CASE-2021-0117). Pending 1, Withdrawn 1, Dismissed 1. So totals: Judgment entered 3? Wait includes defendant 1 + plaintiff 2 = 3. Pending 1. Withdrawn 1. Dismissed 1.\n\nReview Rating: Need to assess. Active status, financial growth modest, positive free cash flow, net debt moderate. No material defendant litigation? There is one defendant case with claim 310,600. Not material relative to revenue? 0.27% of revenue. So no material defendant litigation. So 4/5 per rubric? But check: net debt 411,838 vs equity 614,048? net debt is about 67% of equity. moderate. Operating margin 12.5%. Net profit margin 7.8% (not needed). So overall stable. No severe issues. So 4/5 high review priority. Provide one sentence.\n\nFormatting: financial percentages one decimal. shareholder 63.91%. Net debt RM411.84k. Free cash flow RM144.60k. Revenue growth 6.4%. Gross profit margin 42.5%. Operating profit margin 12.5%.\n\nMake sure to use RM with decimal? For free cash flow, we can do RM144.60k. For net debt RM411.84k.\n\nMake sure to use two decimal places for shareholder percentages. Use \"63.91%\".\n\nUse one decimal place for financial percentages. Eg \"6.4%\" \"42.5%\" \"12.5%\".\n\nNow produce markdown with headings:\n\n**Company:** ... include all details.\n\n**Director & Shareholder:** text.\n\n**Financials:** mention latest year, yoy growth, margins, free cash flow, net debt, narrative.\n\n**Litigation:** counts, sums.\n\n**Review Rating:** score and explanation.\n\nEnsure 5 paragraphs only. Use concise sentences.\n\nLet's craft.\n\n"
+        }
+      }
+    ],
+    "created": 1795379169,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": "on_demand",
+    "system_fingerprint": "fp_e23fc997ca",
+    "usage": {
+      "completion_tokens": 1222,
+      "prompt_tokens": 3524,
+      "total_tokens": 4746,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 895,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null
+      },
+      "prompt_tokens_details": null,
+      "queue_time": 0.156948797,
+      "prompt_time": 0.216300942,
+      "completion_time": 1.258685799,
+      "total_time": 1.474986741
+    },
+    "usage_breakdown": null,
+    "x_groq": {
+      "id": "req_01m82f00f2e2ybhxgv1xta7wa1",
+      "seed": 1276776566
+    }
+  }
+}

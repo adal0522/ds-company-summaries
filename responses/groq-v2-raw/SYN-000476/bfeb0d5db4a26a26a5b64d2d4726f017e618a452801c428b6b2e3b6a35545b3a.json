@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "fingerprint": "bfeb0d5db4a26a26a5b64d2d4726f017e618a452801c428b6b2e3b6a35545b3a",
+  "response": {
+    "id": "chatcmpl-9e217b85-5b3b-476c-b814-6388cbad4cc7",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**Company:** Kirana Everbright Packaging Sdn. Bhd. (Private limited company) was incorporated on 26 Nov 2005 in Sarawak, Malaysia. The company is currently active and operates in the manufacturing industry, specialising in the production of plastic packaging for food products. Its share capital is RM2.5 m.  \n\n**Director & Shareholder:** The board comprises 4 directors. The company has 1 shareholder, Sejahtera Holdings Sdn. Bhd., holding 100.00 % of the shares.  \n\n**Financials:** In FY 2024 revenue fell by 20.3 % from RM30.35 m to RM24.21 m, with a gross profit margin of 23.3 % and an operating profit margin of 2.3 %. Free cash flow was RM101.48 k, while net debt stood at RM1.59 m (borrowings RM3.65 m minus cash RM2.05 m). The firm shows declining top‑line growth and thin operating profitability, yet it remains cash‑generating and has modest net debt.  \n\n**Litigation:** No court cases were recorded.  \n\n**Review Rating:** 4/5 – High review priority: revenue decline and low operating margin are notable concerns, but the company remains cash‑positive and has no defendant litigation to offset the risks.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "We need to produce summary in 5 markdown paragraphs with headings.\n\nLet's extract needed info.\n\nCompany: name Kirana Everbright Packaging Sdn. Bhd., no former names. Company type Private limited company, incorporation 2005-11-26, status Active, industry Manufacturing, state Sarawak, nature: Manufacture of plastic packaging for food products. Share capital 2500000.\n\nDirector count: 4. Shareholders: 1; largest shareholder Sejahtera Holdings Sdn. Bhd. 100.0%.\n\nFinancials: Latest year 2024. Need YoY revenue growth vs 2023.\n\nRevenue 2024: 24205023. Revenue 2023: 30347922. Growth: (24,205,023 - 30,347,922)/30,347,922 = -6,142,899 /30,347,922 = -0.2025 = -20.3%. So decline 20.3%.\n\nGross profit margin: 2024 grossProfit 5642591 / revenue 24205023 = 0.2331 or 23.3%. Operating profit margin: 554074 /24205023 = 0.0229 or 2.3%.\n\nFree cash flow 2024: 101484 (positive). Net debt: borrowings 3647441 - cash 2052626 = 1594815 (positive debt). That's net debt.\n\nAlso mention financial declines and low margins.\n\nLitigation: cases array empty. So \"No court cases were recorded.\"\n\nReview Rating: We need to assign 1-5 based on rubric. Active status, declining revenue, gross margin still 23.3% but operating margin 2.3% which is low. Free cash flow positive but small (101k). Net debt 1.6m. No defendant litigation. So we have declining revenue and low operating margin, but still positive cash flow and no litigation. Could be 3/5 moderate. But let's evaluate rubric:\n\n5/5 very high review priority: active status, broadly stable or positive financial performance, positive cash generation, no material defendant litigation.\n\nWe have declining revenue, low operating margin, but still positive cash flow, net debt moderate, no litigation. Not stable. So 4/5 maybe? Let's see rubric for 4/5: high review priority: mostly sound indicators with one or two modest adverse signals.\n\nWe have one major adverse signal: declining revenue, low operating margin, but still positive cash and no litigation. That's maybe 4/5. However, 3/5: moderate: mixed positive and negative signals, missing financial info that prevents confident assessment. We do have financial info, though negative signals present. I'd lean 4/5.\n\nCheck rubric: 5/5 requires broadly stable or positive financial performance. Not the case. So 4/5.\n\nNow produce paragraph for each heading.\n\nFormatting: percentages: one decimal place. Shareholder percentages: two decimal places. So 100.00%.\n\nCurrency: use RM compact format. revenue is 24,205,023 => RM24.21m. free cash flow 101,484 => RM101.48k. net debt 1,594,815 => RM1.59m. Cash 2,052,626 => RM2.05m. borrowings 3,647,441 => RM3.65m. Provide numbers.\n\nGross profit margin 23.3%. Operating profit margin 2.3%. YoY revenue growth -20.3%.\n\nNow craft five markdown paragraphs with headings:\n\n- Company: summary line.\n\n- Director & Shareholder: directors 4, shareholders 1, largest 100.00%.\n\n- Financials: revenue decline -20.3%, gross 23.3% margin, operating 2.3%, free cash flow RM101.48k, net debt RM1.59m, mention decline, low margins, positive cash but modest.\n\n- Litigation: no cases.\n\n- Review Rating: 4/5 – High review priority – declining revenue and thin operating margin raise concern, but positive cash flow and absence of defendant litigation reduce urgency.\n\nCheck formatting: Use markdown headings with bold? The instruction says headings as \"**Company:**\" etc. So use markdown headings? It says \"Return only five Markdown paragraphs with these headings, in this order:\" and lists headings with **Company:** etc. So each paragraph starts with bold heading? Probably like:\n\n**Company:** ...\n\nSo each paragraph begins with **Company:** then content. They say \"Return only five Markdown paragraphs with these headings\". So each paragraph should start with **Company:** and then content, no extra line breaks maybe.\n\nMake sure each paragraph is a single paragraph. We can put line breaks inside but it's okay.\n\nNow produce."
+        }
+      }
+    ],
+    "created": 1795379227,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": "on_demand",
+    "system_fingerprint": "fp_5979a0e1b7",
+    "usage": {
+      "completion_tokens": 1280,
+      "prompt_tokens": 3165,
+      "total_tokens": 4445,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 984,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 256,
+        "image_tokens": null,
+        "text_tokens": null
+      },
+      "queue_time": 0.36854514,
+      "prompt_time": 0.276892719,
+      "completion_time": 1.3858645680000001,
+      "total_time": 1.662757287
+    },
+    "usage_breakdown": null,
+    "x_groq": {
+      "id": "req_01m82f1s31e52t7fpbnm2wwr9q",
+      "seed": 863259719
+    }
+  }
+}

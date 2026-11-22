@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "fingerprint": "6c0bc12bd790c878b1b81d175b99a3e0e9e019b78c6ca7990fac43b0bcc97108",
+  "response": {
+    "id": "chatcmpl-c164e738-a531-4930-8acb-6230b95f1014",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**Company:** Cahaya Golden Systems Sdn. Bhd., a Private limited company incorporated on 29 Sep 2019, is currently **Winding up**. It operates in the Technology sector in Selangor, providing software development for small‑business accounting. Share capital is **RM2.5m**.  \n\n**Director & Shareholder:** The company has **3 directors** and **3 shareholders**. The largest shareholder is **Director 2** with **52.17 %** of the equity.  \n\n**Financials:** Using the latest FY 2024, revenue grew **2.5 %** YoY versus FY 2023. Gross profit margin stands at **60.8 %** and operating profit margin at **14.8 %**. Free cash flow is **RM614.69k** (positive), while net debt (borrowings minus cash) is **RM2.33m**, indicating a moderate debt load.  \n\n**Litigation:** The record lists **8 court cases**, all where the company is the defendant. Total claim amount sums to **RM6.82m**. Case statuses comprise **4 pending**, **1 dismissed**, **1 withdrawn**, **1 judgment entered**, and **1 settled**.  \n\n**Review Rating:** **1/5 – Very low review priority** – the company is in winding‑up status and faces multiple defendant claims, outweighing any positive financial signals.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "We need to produce five markdown paragraphs with headings.\n\nFirst paragraph: **Company:** Include name, (formerly known as ...) if former names exist – none, so just name. Include company type, incorporation date, current status, industry, state, nature of business, share capital. Share capital is 2,500,000 (RM). Format as RM2.5m? Compact: RM2.5m (or RM2.5m). Use RM2.5m.\n\nSecond: **Director & Shareholder:** Count directors: 3. Shareholders: 3. Largest shareholder: Director 2 with 52.17%. Use two decimal places. Provide phrasing.\n\nThird: **Financials:** Use latest financial year: 2024. Need YoY revenue growth against previous year (2023). revenue 2024 = 13,006,124; 2023 = 12,693,512. Growth = (13006124 - 12693512) / |12693512| *100 = (312,? compute). 13006124-12693512 = 312,? 13006124-12693512 = 312,? Let's calculate: 13,006,124 - 12,693,512 = 312,612. Divide by 12,693,512 = 0.02463 = 2.5% approx. One decimal place => 2.5%.\n\nGross profit margin = gross profit / revenue *100. Gross profit 7,911,140 / 13,006,124 = 0.6083 (provided). Convert to 60.8% (one decimal). Operating profit margin = operating profit 1,922,281 / revenue 13,006,124 = 0.1478 => 14.8%.\n\nFree cash flow from record: 2024 freeCashFlow = 614,686. Format: RM614.69k (two decimals for thousand). Net debt = borrowings - cash. Borrowings 4,352,967; cash 2,022,216 => net debt = 2,330,751. Positive net debt. Format RM2.33m.\n\nDescribe growth, decline, cash flow. Revenue grew 2.5% YoY. Gross profit margin 60.8% (good). Operating profit margin 14.8% (stable). Free cash flow positive RM614.69k but net debt sizable RM2.33m.\n\nIf any missing data: no.\n\nFourth: **Litigation:** Count cases: list has 8 entries. All are defendant role (yes all are defendant). Sum claim amounts for defendant: sum all claimAmount values.\n\nLet's sum: 40,100 + 690,500 + 98,000 + 3,840,700 + 606,600 + 10,000 + 1,165,200 + 372,400 =\n\nCompute stepwise:\n\n40,100 + 690,500 = 730,600\n+98,000 = 828,600\n+3,840,700 = 4,669,300\n+606,600 = 5,275,900\n+10,000 = 5,285,900\n+1,165,200 = 6,451,100\n+372,400 = 6,823,500\n\nTotal defendant claim amount RM6,823,500. No plaintiff cases.\n\nAggregate case statuses: list statuses: Pending, Pending, Dismissed, Withdrawn, Pending, Judgment entered, Pending, Settled. Count each? We can summarize: 4 pending, 1 dismissed, 1 withdrawn, 1 judgment entered, 1 settled.\n\nFifth: **Review Rating:** Status is Winding up. According to rubric, winding-up status takes priority and always receives 1/5. Provide label \"Very low review priority\". One short sentence explanation: winding-up status and material defendant litigation.\n\nNow produce markdown paragraphs with headings.\n\nRemember formatting: percentages one decimal, shareholder percentages two decimals. Use RM formatting: RM2.5m, RM614.69k, RM2.33m, claim total RM6.82m? Need compact: RM6.82m (two decimals?). Use RM6.82m (one decimal maybe). Use two decimal places for shareholder percentages only.\n\nProceed."
+        }
+      }
+    ],
+    "created": 1795378922,
+    "model": "openai/gpt-oss-120b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": "on_demand",
+    "system_fingerprint": "fp_69334c0be3",
+    "usage": {
+      "completion_tokens": 1204,
+      "prompt_tokens": 3787,
+      "total_tokens": 4991,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 899,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null
+      },
+      "prompt_tokens_details": null,
+      "queue_time": 0.158769833,
+      "prompt_time": 0.175778826,
+      "completion_time": 2.504361669,
+      "total_time": 2.680140495
+    },
+    "usage_breakdown": null,
+    "x_groq": {
+      "id": "req_01m82ereeaewbberb5yt76sb50",
+      "seed": 942416405
+    }
+  }
+}

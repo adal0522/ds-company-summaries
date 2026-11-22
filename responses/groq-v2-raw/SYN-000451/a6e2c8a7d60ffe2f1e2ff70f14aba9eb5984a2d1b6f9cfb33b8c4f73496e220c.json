@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "fingerprint": "a6e2c8a7d60ffe2f1e2ff70f14aba9eb5984a2d1b6f9cfb33b8c4f73496e220c",
+  "response": {
+    "id": "chatcmpl-5defbfa9-99a3-4c9c-a320-369be48b07f8",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**Company:** Mutiara Delima Bakery Sdn. Bhd. (formerly known as Gemilang Ventures Sdn. Bhd.) – a private limited company incorporated on 1995‑08‑28, currently active in Kuala Lumpur. The business operates cafés and coffee shops in Penang under the Food & Beverage industry, with a share capital of RM500.00k.\n\n**Director & Shareholder:** The board consists of 5 directors and there are 4 shareholders. The largest shareholder is Director 1, owning 50.59 % of the shares.\n\n**Financials:** In the latest year 2024, revenue fell by -7.4 % from RM2249.83k to RM2083.98k. Gross profit margin contracted to 52.0 % (RM1084.52k) while operating profit margin slumped to -11.2 % (RM‑232.29k). Free cash flow was negative at RM‑205.75k and net debt stood at RM659.21k, indicating a deteriorating cash generation profile and growing leverage.\n\n**Litigation:** Two court cases were recorded. As defendant, the company faced one debt‑recovery suit (claim RM106.90k) which was dismissed. As plaintiff, it pursued one debt‑recovery claim (claim RM519.80k) that was settled. The overall status of the cases is Dismissed and Settled.\n\n**Review Rating:** 2/5 – *High‑risk review priority.* The company is active but shows declining sales, negative operating and free cash flows, and a growing net debt position, while also having material defendant litigation.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "We must produce 5 markdown paragraphs with headings.\n\nWe must parse data.\n\nCompany: name + former name.\n\nCompany type: Private limited company. incorporation date. status. industry. state. nature of business. share capital: 500000 (likely RM).\n\nDirector & Shareholder: directors count 5. shareholders count 4. Largest shareholder: Director 1 50.59%.\n\nFinancials: Latest financial year: 2024. Need revenue growth YoY vs previous year 2023: (2083984 - 2249833)/2249833 = negative. Let's compute: difference -165849. Divide by 2249833 = -0.0737 => -7.4% growth. Gross profit margin 2024: 1084517/2083984 = 0.5204 => 52.0%. Operating profit margin: -232289/2083984 = -0.1115 => -11.2%. Free cash flow: -205752. Net debt: borrowings - cash: 786783 - 127571 = 659212 (positive). Net debt positive.\n\nDescribe growth: decline revenue, negative operating margin, negative free cash flow, high net debt.\n\nLitigation: cases 2. Count defendant cases: 1 with claim 106900. Plaintiff cases: 1 with claim 519800. Sum claim amounts for defendant: 106900. For plaintiff: 519800. Statuses: defendant Dismissed; plaintiff Settled. Aggregate statuses: Dismissed, Settled.\n\nReview rating: We have active status, but financial negative operating margin, negative free cash flow, net debt. So low to moderate. rubric: 2/5 is for several material adverse signals such as declining performance, negative operating margin, negative free cash flow, substantial net debt, or material defendant litigation. We have declining performance (revenue decline), negative operating margin, negative free cash flow, net debt positive (but not huge). Defendant litigation: one case dismissed. So rating 2/5.\n\nBut rule: if missing financial info then 3/5. Not missing. So 2/5.\n\nNow formatting: percentages one decimal. Use one decimal place for financial percentages. So 52.0% etc.\n\nShareholder percentages two decimal places: 50.59%.\n\nFinancial amounts: RM formatting: For amounts, use RM, RMx.xk, or RMx.xxm. For large amounts, like revenue 2,083,984. That's RM2083.984k? 2,083,984 ~ RM2.08m? They didn't define m. They said RMx.xk or RMx.xxm. Use k for thousand. So RM2.08m not allowed. Use RM2083.98k. We'll round to one decimal place for k? Use two decimals? Not specified. They said use RMx.xk, or RMx.xxm. So we can use RM2084k? Use RM2083.98k? Let's use RM2083.98k (two decimals). But they didn't specify decimals for k. We'll use RM2083.98k.\n\nRevenue 2249833 -> RM2249.83k.\n\nGross profit 1084517 -> RM1084.52k.\n\nOperating profit -232289 -> RM-232.29k.\n\nFree cash flow -205752 -> RM-205.75k.\n\nNet debt 659212 -> RM659.21k.\n\nNow produce markdown headings.\n\nParagraph 1: Company. Provide details.\n\nParagraph 2: Director & Shareholder.\n\nParagraph 3: Financials.\n\nParagraph 4: Litigation.\n\nParagraph 5: Review Rating.\n\nLet's craft.\n\nCheck formatting: Use headings with double stars. Each paragraph separate.\n\nLet's compute revenue growth: 2083984 - 2249833 = -165849. Divided by 2249833 = -0.0737 => -7.4%. We present -7.4% growth.\n\nGross profit margin 52.0%. Operating margin -11.2%.\n\nNet debt 659,212.\n\nNow produce.\n\nAlso include share capital: 500000. Format: RM500.00k? 500000 = RM500.00k.\n\nWe'll keep as RM500.00k.\n\nNow produce final."
+        }
+      }
+    ],
+    "created": 1795379097,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": "on_demand",
+    "system_fingerprint": "fp_ce54c53bd5",
+    "usage": {
+      "completion_tokens": 1247,
+      "prompt_tokens": 3397,
+      "total_tokens": 4644,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 886,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 256,
+        "image_tokens": null,
+        "text_tokens": null
+      },
+      "queue_time": 0.367443467,
+      "prompt_time": 0.240623412,
+      "completion_time": 1.320791506,
+      "total_time": 1.561414918
+    },
+    "usage_breakdown": null,
+    "x_groq": {
+      "id": "req_01m82exsqbee49wkc868np3zct",
+      "seed": 1323737102
+    }
+  }
+}

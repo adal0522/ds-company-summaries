@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "fingerprint": "879cb60316af9af4dd96f2ca762803d725b85f7bb17473e0f612c5f480b5f78b",
+  "response": {
+    "id": "chatcmpl-1e48752f-208e-4905-a23a-1de5c18b5636",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**Company:** Gemilang Harmoni Enterprise Sdn. Bhd. (formerly known as Unity Industries Sdn. Bhd.) – Private limited company, incorporated on 21 Oct 1997, currently Active. It operates in the Retail industry in Sarawak, specialising in the sale of textiles and baju kurung. Share capital amounts to RM5.0 m.  \n\n**Director & Shareholder:** The company has 3 directors and 3 shareholders. Director 2 is the largest shareholder, holding 45.57% of the shares.  \n\n**Financials:** No financial statements are recorded for the most recent fiscal year, so revenue growth, margin analysis, free cash flow, and net debt cannot be assessed.  \n\n**Litigation:** No court cases were recorded.  \n\n**Review Rating:** 3/5 — Moderate review priority: The absence of financial data limits confidence, yet no material defendant litigation or other adverse signals are evident.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "We need to produce summary with the five headings.\n\nGiven JSON: registrationNumber, profile, relationships (directors and shareholders). financials years array empty, litigation cases empty.\n\nWe need to do calculations: financials section: latest financial year absent. So \"If financial data or a prior year is absent, state that clearly.\" So we should say \"Financial data is not available.\" We need to describe growth, decline etc but absent.\n\nLitigation: no cases.\n\nDirector & Shareholder: Count directors 3, shareholders 3. Largest shareholder: Director 2 45.57%. Need formatting percentages with two decimal places: 45.57%. Use singular/plural correctly: \"3 directors\" etc. Should include largest shareholder and percentage.\n\nCompany: name current: Gemilang Harmoni Enterprise Sdn. Bhd. formerly known as Unity Industries Sdn. Bhd. Include type, incorporation date, status, industry, state, nature of business, share capital. Share capital 5000000: format ringgit compactly: RM5,000,000? The guidelines: Format ringgit compactly as RM, RMx.xk, or RMx.xxm. So we can write RM5.0m or RM5m? The guideline: \"RM, RMx.xk, or RMx.xxm\". For large number, RM5.0m? But they didn't mention m. Maybe \"RM5,000,000\". They said \"compactly\" so maybe RM5.0m. Let's use RM5.0m. But not sure about the 'm' abbreviation. They said \"RMx.xk\" for thousand, \"RMx.xxm\" for million. So we use RM5.0m. Provide share capital: RM5.0m. Or we can write \"RM5.0m\". Use \"m\" lower-case.\n\nNow the Review Rating: Since financial data missing and no litigation, rating 3/5? The rubric: 3/5 for missing financial information alone when prevents confident assessment. No other signals. So 3/5. Provide one sentence: \"Missing financials hinder assessment despite no adverse litigation, giving a moderate review priority.\"\n\nNow need to use exactly five paragraphs with headings.\n\nLet's craft.\n\nParagraph 1 heading **Company:**\n\nInclude \"Gemilang Harmoni Enterprise Sdn. Bhd. (formerly known as Unity Industries Sdn. Bhd.)\" Type: Private limited company; incorporation date: 21 Oct 1997; status: Active; industry: Retail; state: Sarawak; nature of business: Retail of textiles and baju kurung; share capital: RM5.0m.\n\nParagraph 2 heading **Director & Shareholder:**\n\n\"3 directors and 3 shareholders. The largest shareholder is Director 2 holding 45.57%.\"\n\nParagraph 3 heading **Financials:**\n\n\"Financial data for recent years is not available.\" Provide note about missing data.\n\nParagraph 4 heading **Litigation:**\n\n\"No court cases were recorded.\"\n\nParagraph 5 heading **Review Rating:**\n\n\"3/5 — Moderate review priority: Financial information is missing, which limits confidence, but no defendant litigation or other adverse signals are present.\"\n\nLet's format percentages to two decimals: 25.02%, 45.57%, 29.41%. Use two decimal places.\n\nWe must ensure ringgit formatting: \"RM5.0m\" as share capital.\n\nMake sure headings are **Company:** etc with Markdown heading style. Each paragraph includes heading and content. We need five Markdown paragraphs.\n\nLet's craft final answer."
+        }
+      }
+    ],
+    "created": 1795379061,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": "on_demand",
+    "system_fingerprint": "fp_80501ff3a1",
+    "usage": {
+      "completion_tokens": 939,
+      "prompt_tokens": 1114,
+      "total_tokens": 2053,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 737,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null
+      },
+      "prompt_tokens_details": null,
+      "queue_time": 0.048988426,
+      "prompt_time": 0.070317884,
+      "completion_time": 0.987933561,
+      "total_time": 1.058251445
+    },
+    "usage_breakdown": null,
+    "x_groq": {
+      "id": "req_01m82ewq88eveafpmhzkpw30xg",
+      "seed": 1897716689
+    }
+  }
+}
