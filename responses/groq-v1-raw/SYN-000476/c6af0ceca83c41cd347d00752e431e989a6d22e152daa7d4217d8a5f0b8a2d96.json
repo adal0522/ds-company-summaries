@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "fingerprint": "c6af0ceca83c41cd347d00752e431e989a6d22e152daa7d4217d8a5f0b8a2d96",
+  "response": {
+    "id": "chatcmpl-c771774c-11a5-4609-9e32-05506c1b8dcc",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**Company:** Kirana Everbright Packaging Sdn. Bhd. – Private limited company, incorporated on 26 Nov 2005, currently **Active**. Operates in the **Manufacturing** industry in Sarawak, producing plastic packaging for food products. Share capital is **RM2.5m**.  \n\n**Director & Shareholder:** The company has **4 directors** and **1 shareholder**. The sole shareholder, **Sejahtera Holdings Sdn. Bhd.**, holds **100.00%** of the equity.  \n\n**Financials:** Using the latest FY 2024, revenue fell **‑20.3%** YoY versus FY 2023. Gross profit margin is **23.3%** and operating profit margin **2.3%**. Free cash flow is **RM101.48k**, while net debt (borrowings less cash) stands at **RM1.59m**. The firm shows a sharp revenue decline, thin profitability and modest cash generation, leaving a modest net debt position.  \n\n**Litigation:** No court cases were recorded.  \n\n**Review Rating:** **2/5 – Low review priority** – Revenue has dropped sharply and margins are thin, with only modest cash generation and a net debt balance, signalling material adverse signals despite an active status and no litigation.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "We need produce five markdown paragraphs with headings **Company:**, **Director & Shareholder:**, **Financials:**, **Litigation:**, **Review Rating:**.\n\nCompute details.\n\nCompany: name Kirana Everbright Packaging Sdn. Bhd. No former names. Type Private limited company. Incorporation 26 Nov 2005. Status Active. Industry Manufacturing. State Sarawak. Nature of business as given. Share capital 2,500,000 (RM2.5m). Need format as RM2.5m? The instruction: format ringgit compactly as RM, RMx.xk, or RMx.xxm. So 2,500,000 = RM2.5m. Use one decimal? Probably RM2.5m.\n\nDirectors count: 4 directors. Shareholders count: 1 shareholder (company). Largest shareholder: Sejahtera Holdings Sdn. Bhd. 100.00%.\n\nFinancials: latest year is 2024. Need YoY revenue growth against 2023. Revenue 2024 = 24,205,023. 2023 revenue = 30,347,922. Growth = (24,205,023 - 30,347,922) / |30,347,922| *100 = (-6,142,899) / 30,347,922 *100 = -20.25% approx. Compute: 6,142,899/30,347,922 = 0.2025 => -20.3% (one decimal). So -20.3% YoY decline.\n\nGross profit margin: gross profit 5,642,591 / revenue 24,205,023 = 0.2331 = 23.3% (one decimal). Operating profit margin: operating profit 554,074 / revenue 24,205,023 = 0.0229 = 2.3% (one decimal). Free cash flow: 101,484 (RM101.48k). Net debt = borrowings - cash = 3,647,441 - 2,052,626 = 1,594,815 (RM1.59m). Positive net debt (i.e., debt net of cash). Provide description: revenue declined 20.3% YoY, margins slipped, free cash flow small positive, net debt around RM1.6m.\n\nLitigation: cases array empty => No court cases were recorded.\n\nReview Rating: Status Active, financial performance declining, margins low, free cash flow tiny, net debt moderate, no litigation. According to rubric: active status but declining performance, negative operating margin (still positive but low), small positive free cash flow, net debt exists. This likely \"2/5 – Low review priority\" due to several material adverse signals: declining performance, low margins, net debt. No defendant litigation. So 2/5.\n\nProvide label: \"2/5 – Low review priority\". One short sentence: e.g., \"Revenue fell sharply and margins are thin, with modest cash generation and net debt, warranting low‑priority review.\"\n\nNow format each paragraph with heading bold.\n\nNeed one decimal place for percentages, two decimal places for shareholder percentages.\n\nShareholder % 100.00%.\n\nFinancial percentages: YoY revenue growth -20.3%, gross profit margin 23.3%, operating profit margin 2.3%.\n\nFree cash flow RM101.48k (since 101,484 is ~RM101.48k). Use RM101.48k.\n\nNet debt RM1.59m (since 1,594,815 ~1.59m). Use RM1.59m.\n\nNow craft paragraphs.\n\nParagraph 1: **Company:** ... include everything.\n\nParagraph 2: **Director & Shareholder:** count etc.\n\nParagraph 3: **Financials:** include yoy growth, gross profit margin, operating profit margin, free cash flow, net debt, description.\n\nParagraph 4: **Litigation:** No court cases were recorded.\n\nParagraph 5: **Review Rating:** 2/5 – Low review priority. Explanation.\n\nMake sure each paragraph separated by a blank line.\n\nLet's craft."
+        }
+      }
+    ],
+    "created": 1795379004,
+    "model": "openai/gpt-oss-120b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": "on_demand",
+    "system_fingerprint": "fp_4727af4560",
+    "usage": {
+      "completion_tokens": 1138,
+      "prompt_tokens": 3165,
+      "total_tokens": 4303,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 856,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 256,
+        "image_tokens": null,
+        "text_tokens": null
+      },
+      "queue_time": 0.15853724,
+      "prompt_time": 0.114806819,
+      "completion_time": 2.400863919,
+      "total_time": 2.515670738
+    },
+    "usage_breakdown": null,
+    "x_groq": {
+      "id": "req_01m82etyxaeej95z49mxyvm14j",
+      "seed": 1083836862
+    }
+  }
+}

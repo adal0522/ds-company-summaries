@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "fingerprint": "9562fa31c736466baac5fa92989e4953d9b590aba47788669a94ead16df0ce03",
+  "response": {
+    "id": "chatcmpl-95f3c697-4a34-452f-96d5-408f1fc4acda",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**Company:** Gemilang Harmoni Enterprise Sdn. Bhd. (formerly known as Unity Industries Sdn. Bhd.) – Private limited company, incorporated on 21 Oct 1997, currently **Active**. Operates in the **Retail** industry in **Sarawak**, focusing on “Retail of textiles and baju kurung”. Share capital is **RM5.0m**.  \n\n**Director & Shareholder:** The company has **3 directors** and **3 shareholders**. The largest shareholder is **Director 2** with **45.57 %** of the equity.  \n\n**Financials:** No financial data were provided for any year, so the latest revenue, profit figures, growth rates, margins, free cash flow and net debt cannot be calculated or commented upon.  \n\n**Litigation:** No court cases were recorded.  \n\n**Review Rating:** **3/5 – Moderate review priority**. The firm is active and has no litigation, but the absence of any financial information prevents a confident assessment of its performance and risk profile.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "We need produce 5 markdown paragraphs with headings.\n\nFirst, Company: name, formerly known as..., type, incorporation date, status, industry, state, nature, share capital. Share capital is 5,000,000 ringgit => format RM5.0m (since compact: RMx.xxm). Use one decimal? Actually formatting rule: \"RM, RMx.xk, or RMx.xxm.\" So RM5.0m.\n\nSecond, Director & Shareholder: count directors = 3 (plural). shareholders = 3. Largest shareholder: Director 2 with 45.57%. Provide percentage with two decimal places.\n\nThird, Financials: years array empty, so no financial data. Must state that clearly: No financial data available for latest year, cannot calculate growth etc. Also missing prior year. So we note missing financial information.\n\nSince missing financial info, rating will be 3/5 per rubric: \"Use 3/5 for missing financial information alone when it prevents a confident assessment.\"\n\nBut also active status, no litigation, but missing financials triggers 3/5.\n\nFourth, Litigation: cases empty, so \"No court cases were recorded.\"\n\nFifth, Review Rating: 3/5 (Moderate) with label and explanation.\n\nNeed to follow formatting: each paragraph heading in bold, like **Company:** etc.\n\nWe need 5 markdown paragraphs.\n\nMake sure percentages one decimal place for financial percentages (none) and shareholder percentages two decimal places (already). Use correct singular/plural wording: \"3 directors\", \"3 shareholders\". Also \"largest shareholder is Director 2 (45.57%)\".\n\nNow produce final answer."
+        }
+      }
+    ],
+    "created": 1795378862,
+    "model": "openai/gpt-oss-120b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": "on_demand",
+    "system_fingerprint": "fp_420c059a6a",
+    "usage": {
+      "completion_tokens": 565,
+      "prompt_tokens": 1114,
+      "total_tokens": 1679,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 340,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 1024,
+        "image_tokens": null,
+        "text_tokens": null
+      },
+      "queue_time": 0.048978797,
+      "prompt_time": 0.014546483,
+      "completion_time": 1.372268522,
+      "total_time": 1.3868150049999999
+    },
+    "usage_breakdown": null,
+    "x_groq": {
+      "id": "req_01m82epmrjee19svavvvg9q5ys",
+      "seed": 1410447697
+    }
+  }
+}

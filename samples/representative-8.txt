@@ -1,0 +1,9 @@
+# Deliberately varied evaluation sample; one registration number per line.
+SYN-000217
+SYN-000333
+SYN-001203
+SYN-000451
+SYN-000545
+SYN-000640
+SYN-001298
+SYN-000476

@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "fingerprint": "c4a3b57c7c8f61b7248382dd5ee13aa7e5aa3f87a33dd4edff0cfea090ab2af4",
+  "response": {
+    "id": "chatcmpl-a356cf45-85ca-404a-a85b-7eb58984bdd1",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**Company:** Mutiara Delima Bakery Sdn. Bhd. (formerly known as Gemilang Ventures Sdn. Bhd.) – Private limited company, incorporated 28 Aug 1995, **Active**. Operates in the Food & Beverage sector from Kuala Lumpur, running coffee shops and cafés in Penang. Share capital is **RM500.0k**.  \n\n**Director & Shareholder:** The firm has **5 directors** and **4 shareholders**. The largest shareholder is **Director 1** with **50.59%** of the equity.  \n\n**Financials:** Using the most recent FY 2024 (ended 30 Jun 2024), revenue fell to **RM2.08m**, a **‑7.4%** YoY decline from FY 2023. Gross profit margin stands at **52.0%**, while operating profit margin is **‑11.2%**, indicating loss‑making operations. Free cash flow is **RM‑205.75k** and net debt (borrowings ‑ cash) amounts to **RM659.21k**, reflecting a cash‑negative position and considerable leverage.  \n\n**Litigation:** Two court cases are recorded. One defendant case (Debt recovery, dismissed) with a claim of **RM106.90k**, and one plaintiff case (Debt recovery, settled) with a claim of **RM519.80k**.  \n\n**Review Rating:** **2/5 – Low review priority**. The company shows declining revenue, negative operating margins, negative free cash flow and a sizable net‑debt burden, outweighing the modest litigation exposure.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "We need to produce five markdown paragraphs with headings: **Company:**, **Director & Shareholder:**, **Financials:**, **Litigation:**, **Review Rating:**.\n\nCompute counts: directors = 5. Shareholders = 4. Largest shareholder: Director 1 with 50.59%.\n\nFinancials: latest year is 2024. Need YoY revenue growth: compare 2024 revenue 2,083,984 vs 2023 revenue 2,249,833. Growth = (2083984 - 2249833)/abs(2249833)*100. Compute diff: 2083984 - 2249833 = -165,849. Divide by 2,249,833 = -0.0737 approx. *100 = -7.4% (one decimal). So -7.4% decline.\n\nGross profit margin: gross profit 1,084,517 / revenue 2,083,984 = 0.5204 => 52.0% (one decimal). Already given but compute: 52.0%.\n\nOperating profit margin: operating profit -232,289 / revenue 2,083,984 = -0.1115 => -11.2% (one decimal).\n\nFree cash flow: from record -205,752. Format as RM-205.75k (since -205,752). Net debt = borrowings - cash = 786,783 - 127,571 = 659,212. Format RM659.21k.\n\nDescribe: revenue declined 7.4% YoY, gross margin ~52%, operating margin negative -11.2%, free cash flow negative, net debt substantial.\n\nLitigation: cases count = 2. Defendant cases: 1 with claim 106,900. Plaintiff cases: 1 with claim 519,800. Sum defendant claim = RM106.90k. Plaintiff claim sum = RM519.80k. Statuses: Dismissed, Settled. Aggregate statuses: list maybe \"Dismissed, Settled\". Provide counts.\n\nReview Rating: Need to apply rubric. Company active, financials show negative operating profit, negative free cash flow, net debt high, but no material defendant litigation (only one defendant case dismissed, claim modest). So several adverse signals: declining revenue, negative operating margin, negative free cash flow, net debt high. This suggests low priority (2/5) according to rubric: several material adverse signals such as declining performance, negative operating margin, negative free cash flow, substantial net debt. So rating 2/5 – Low review priority.\n\nNow formatting.\n\nShare capital: 500,000 => RM500.0k.\n\nCompany name: Mutiara Delima Bakery Sdn. Bhd. (formerly known as Gemilang Ventures Sdn. Bhd.)\n\nCompany type Private limited company, incorporation date 28 Aug 1995, status Active, industry Food & Beverage, state Kuala Lumpur, nature \"Mengusahakan kedai kopi dan kafe di Penang\", share capital RM500.0k.\n\nDirectors count: 5 directors. Shareholders count: 4 shareholders. Largest shareholder Director 1 (50.59%).\n\nFinancial paragraph: mention latest FY 2024, revenue RM2.08m, YoY -7.4%, gross profit margin 52.0%, operating profit margin -11.2%, free cash flow RM-205.75k, net debt RM659.21k. Describe growth decline, cash flow negative.\n\nLitigation paragraph: 2 cases; defendant claim total RM106.90k (Dismissed), plaintiff claim total RM519.80k (Settled). Provide totals.\n\nReview rating: 2/5 – Low review priority: because of falling revenue, negative margins, negative free cash flow and high net debt despite active status and no ongoing defendant suit.\n\nMake sure each paragraph is separate with heading in bold.\n\nFormatting numbers: Use RMx.xxm for millions? The spec says \"RM, RMx.xk, or RMx.xxm\". So for revenue 2,083,984 => RM2.08m (since > 1,000,000). Use RM2.08m. For revenue 2023 maybe not needed. For free cash flow -205,752 => RM-205.75k. Net debt 659,212 => RM659.21k. Share capital 500,000 => RM500.0k.\n\nOk.\n\nNow produce final."
+        }
+      }
+    ],
+    "created": 1795378883,
+    "model": "openai/gpt-oss-120b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": "on_demand",
+    "system_fingerprint": "fp_19b184c447",
+    "usage": {
+      "completion_tokens": 1270,
+      "prompt_tokens": 3397,
+      "total_tokens": 4667,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 920,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null
+      },
+      "prompt_tokens_details": null,
+      "queue_time": 0.369994053,
+      "prompt_time": 0.156022561,
+      "completion_time": 2.666036923,
+      "total_time": 2.822059484
+    },
+    "usage_breakdown": null,
+    "x_groq": {
+      "id": "req_01m82eq7ehen6s2yge6cwt1j66",
+      "seed": 377025672
+    }
+  }
+}

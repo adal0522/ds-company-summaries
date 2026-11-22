@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "fingerprint": "21892567f5053ed297c5432ebcdf8c6539e66ad9a3357f872712c2fc39a34126",
+  "response": {
+    "id": "chatcmpl-d48eb098-d674-456e-b4d8-4f15c22a49a3",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**Company:** Teguh Bestari Learning Sdn. Bhd. (Private limited company, incorporated 1991‑12‑07) is an active education company based in Selangor that operates private kindergartens and daycares in Johor Bahru. Its share capital is RM2.5 m.  \n\n**Director & Shareholder:** The board consists of 2 directors and the company has 2 shareholders. The largest shareholder is Director 1, holding 51.02 % of the shares.  \n\n**Financials:** For FY 2024 the company posted revenue of RM5.61 m, a 36.7 % increase over FY 2023. Gross profit margin rose to 54.1 % and operating profit margin to 11.7 %. Free cash flow amounted to RM357.85 k, while net debt (borrowings – cash) stood at RM1.95 m. The figures suggest strong top‑line growth, solid profitability and positive cash generation, though the company remains net‑leveraged.  \n\n**Litigation:** No court cases were recorded.  \n\n**Review Rating:** **5/5 — Very high review priority**. Robust revenue growth, improving margins, healthy cash flow and an absence of material defendant litigation justify a high‑priority review.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "We need produce 5 markdown paragraphs with headings:\n\n- Company\n- Director & Shareholder\n- Financials\n- Litigation\n- Review Rating\n\nUse only data given.\n\nWe need calculate YoY revenue growth from 2024 vs 2023. 2024 revenue 5,606,840, 2023 4,101,556. Growth = (5606840-4101556)/4101556*100 = 1505284/4101556 ~ 0.3671 -> 36.7%. Round one decimal: 36.7%.\n\nGross profit margin 2024: grossProfit 3,033,663 / revenue 5,606,840 = 0.5411 => 54.1%.\n\nOperating profit margin 2024: 654,407 / 5,606,840 = 0.1167 => 11.7%.\n\nFree cash flow 2024: 357,848 (already). Net debt: borrowings 2,654,552 - cash 708,977 = 1,945,575. Positive net debt.\n\nAlso we should describe growth, decline, cash flow. Growth positive 36.7%, margins improved? 54.1% gross margin higher than 48.1% previous year, operating margin 11.7% higher than 9.85%. Cash flow positive 357.8k, net debt 1.95m. So positive.\n\nLitigation: 0 cases.\n\nReview rating: No winding up. Financials positive growth. No defendant litigation. So 5/5. We must add label: \"Very high review priority\". One short sentence explanation: e.g., \"Robust revenue growth, healthy margins, strong cash generation, and no material litigation.\"\n\nWe need to ensure formatting: percentages one decimal for growth, margins; shareholder percentages two decimal. Use RM compact format. For amounts like revenue 5,606,840 we can format as RM5.61m. But rule: Format ringgit compactly as RM, RMx.xk, or RMx.xxm. So revenue 5,606,840 -> RM5.61m. 2023 revenue 4,101,556 -> RM4.10m. 2022 revenue 2,976,052 -> RM2.98m. We don't need to include all but maybe for context.\n\nNet debt 1,945,575 -> RM1.95m.\n\nFree cash flow 357,848 -> RM357.85k (rounded to 2 decimals). But rule: 2 decimal places for shareholder percentages, 1 decimal for percentages, 2 decimal for shareholder percentages. For amounts we can use compact.\n\nBut we may not need to mention all amounts. Only need to report free cash flow and net debt. Use compact.\n\nFree cash flow RM357.85k. Net debt RM1.95m.\n\nDirector & Shareholder: 2 directors. 2 shareholders. Largest shareholder: Director 1 51.02% -> RM? we can give percentage with two decimals 51.02%. Good.\n\nNow create markdown paragraphs.\n\nLet's craft.\n\nParagraph 1: Company. Provide company name, formerly known none. Type, incorporation, status, industry, state, nature, share capital. Share capital 2,500,000 -> RM2.5m. Good.\n\nParagraph 2: Director & Shareholder. \"The company has 2 directors and 2 shareholders. The largest shareholder is Director 1 holding 51.02%.\" Good.\n\nParagraph 3: Financials. Provide latest year 2024. Revenue growth 36.7%, gross margin 54.1%, operating margin 11.7%. Free cash flow RM357.85k. Net debt RM1.95m. Describe growth, margins, cash flow. \"Revenue grew 36.7% from 2023, gross margin increased to 54.1% and operating margin to 11.7%. The company generated RM357.85k of free cash flow, but has net debt of RM1.95m.\" Good.\n\nParagraph 4: Litigation: \"No court cases were recorded.\"\n\nParagraph 5: Review Rating: \"5/5 — Very high review priority. Robust revenue growth, improving margins and healthy cash generation with no material defendant litigation.\"\n\nNeed headings with double asterisks? Use **Company:** etc.\n\nEnsure paragraphs are 5 separate paragraphs. Provide in markdown.\n\nLet's craft final."
+        }
+      }
+    ],
+    "created": 1795379059,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": "on_demand",
+    "system_fingerprint": "fp_a12402de73",
+    "usage": {
+      "completion_tokens": 1206,
+      "prompt_tokens": 3038,
+      "total_tokens": 4244,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 924,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null
+      },
+      "prompt_tokens_details": null,
+      "queue_time": 0.154153031,
+      "prompt_time": 0.162398508,
+      "completion_time": 1.241842429,
+      "total_time": 1.404240937
+    },
+    "usage_breakdown": null,
+    "x_groq": {
+      "id": "req_01m82ewnc4emjb2naa12njqbnj",
+      "seed": 974425272
+    }
+  }
+}

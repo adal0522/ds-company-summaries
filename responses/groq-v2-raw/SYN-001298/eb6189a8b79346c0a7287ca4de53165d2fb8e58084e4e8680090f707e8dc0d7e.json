@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "fingerprint": "eb6189a8b79346c0a7287ca4de53165d2fb8e58084e4e8680090f707e8dc0d7e",
+  "response": {
+    "id": "chatcmpl-b991663e-ba9d-4f18-a5c2-7c79f86002ca",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**Company:** Mutiara Delima Agro Sdn. Bhd. (formerly known as Sejahtera Resources Sdn. Bhd.) is a private limited company incorporated on 11 April 2023, currently active in the agriculture sector of Kuala Lumpur. It operates in oil palm plantation and fresh fruit bunch supply, with a share capital of **RM250 k**.  \n\n**Director & Shareholder:** The board consists of **four directors** and **three shareholders**. The largest shareholder is **Director 3**, who holds **58.92 %** of the shares.  \n\n**Financials:** The latest audited year is 2024, with a revenue of **RM74.3 m**. Gross profit margin is **21.1 %** and operating profit margin is **‑3.4 %**. Free cash flow stands at **‑RM6.6 m**, and net debt (borrowings minus cash) is **RM9.8 m**. Revenue growth could not be assessed due to missing prior‑year data. Overall, margins are modest, operating cash flow is negative, and the company carries a positive net debt position.  \n\n**Litigation:** No court cases were recorded.  \n\n**Review Rating:** 2/5 — **Low review priority**: The firm exhibits negative operating and cash‑flow metrics and carries net debt, prompting a cautious review despite its active status and absence of defendant litigation.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "We need to produce 5 markdown paragraphs with headings.\n\nNeed to extract information.\n\nCompany: name \"Mutiara Delima Agro Sdn. Bhd.\" (formerly known as Sejahtera Resources Sdn. Bhd.). Type: Private limited company. Incorporation date 2023-04-11. Current status: Active. Industry: Agriculture. State: Kuala Lumpur. Nature of business: Oil palm plantation and fresh fruit bunch supply. Share capital: 250000 (RM). Format as RM? It says \"Format ringgit compactly as RM, RMx.xk, or RMx.xxm.\" So 250000 => RM250k? 250,000 ringgit is 250k. So RM250k.\n\nDirector & Shareholder: Count directors 4. Shareholders 3. Largest shareholder: Director 3 with 58.92%. Percentage format two decimals: 58.92%. So largest shareholder is Director 3 58.92%.\n\nFinancials: Latest financial year 2024. We need revenue growth YoY: need previous year revenue. Not present. So say cannot compute. Gross profit margin: given ratio 0.2107 => 21.1%. Operating profit margin: -0.0341 => -3.4%. Report free cash flow: from statement: freeCashFlow? In statements: no freeCashFlow; but ratio has freeCashFlow -6643956. So free cash flow -RM6,643,956. Net debt: borrowings 20462654 - cash 10649316 = 980,? Wait borrowings 20,462,654 minus cash 10,649,316 = 9,813,338 RM. So net debt RM9,813,338.\n\nDescribe growth: revenue growth cannot compute; but we can note revenue unchanged? Actually we can't. We can say revenue growth could not be assessed due to missing prior year. We can describe margins: gross profit margin positive 21.1%; operating margin negative 3.4%. Cash flow negative: free cash flow negative, operating cash flow negative. Net debt positive.\n\nLitigation: no cases.\n\nReview Rating: we have active status, financial performance: revenue growth unknown, margins negative operating, free cash flow negative, net debt positive, but no defendant litigation. We need to apply rubric. Several material adverse signals: negative operating margin, negative free cash flow, net debt positive. That's somewhat adverse. But also no defendant litigation, active status. Score maybe 2/5. Because negative operating margin, negative free cash flow, net debt >0. So low review priority: 2/5. Use label.\n\nNeed one short sentence explaining main reason.\n\nFormatting percentages: 21.1% and -3.4%. Use one decimal place for financial percentages: 21.1% and -3.4%.\n\nShareholder percentages: 58.92% two decimals. Provide.\n\nNeed to format ringgit amounts. For financial figures: revenue 74,303,529 => RM74.3m? RM74.3m or RM74.3m? Compactly as RMx.xm. So RM74.3m. Cost of sales 58.646332m => RM58.6m. Gross profit 15.657197m => RM15.7m. Operating expenses 18.190326m => RM18.2m. Operating profit -2.533129m => -RM2.5m. Cash 10.649316m => RM10.6m. Borrowings 20.462654m => RM20.5m. Net debt 9.813338m => RM9.8m. Free cash flow -6.643956m => -RM6.6m.\n\nNeed to show percentages.\n\nLet's craft.\n\nParagraph 1: Company. Include current name and former name, type, incorporation date, status, industry, state, nature of business, share capital. Use RM250k. Example: \"Mutiara Delima Agro Sdn. Bhd. (formerly known as Sejahtera Resources Sdn. Bhd.) is a private limited company incorporated on 11 April 2023, currently active in the agriculture sector of Kuala Lumpur, focused on oil palm plantation and fresh fruit bunch supply, with a share capital of RM250 k.\"\n\nParagraph 2: Director & Shareholder. \"The board comprises four directors and three shareholders. The largest shareholder is Director 3, holding 58.92% of the shares.\" Need correct singular/plural. Use \"Four directors\" and \"Three shareholders\".\n\nParagraph 3: Financials. Provide revenue, gross profit margin 21.1%, operating profit margin -3.4%, free cash flow -RM6.6m, net debt RM9.8m. Note revenue growth not available. \"Revenue growth could not be determined because prior year data are missing.\" Also mention that free cash flow negative, operating cash flow negative, operating margin negative. Provide percentages with one decimal: 21.1% etc. Provide free cash flow as -RM6.6m.\n\nParagraph 4: Litigation: \"No court cases were recorded.\"\n\nParagraph 5: Review rating: 2/5, label \"Low review priority\". Sentence: \"The firm shows negative operating and cash‑flow metrics, plus net debt, despite being active and having no defendant litigation, warranting a cautious approach.\"\n\nWe should match formatting: rating heading. \"Review Rating: 2/5 — Low review priority: ...\"\n\nMake sure to use exactly heading \"Review Rating:\".\n\nNow produce final output."
+        }
+      }
+    ],
+    "created": 1795379196,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": "on_demand",
+    "system_fingerprint": "fp_ce54c53bd5",
+    "usage": {
+      "completion_tokens": 1468,
+      "prompt_tokens": 1847,
+      "total_tokens": 3315,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1156,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 512,
+        "image_tokens": null,
+        "text_tokens": null
+      },
+      "queue_time": 0.367688475,
+      "prompt_time": 0.082474594,
+      "completion_time": 1.5893205940000001,
+      "total_time": 1.671795188
+    },
+    "usage_breakdown": null,
+    "x_groq": {
+      "id": "req_01m82f0t38e1zvqr0g1sv23jfw",
+      "seed": 1886849574
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "fingerprint": "a4aea6dd81cd6fa6c30882ed54c15673656e4310eba3938d6d819c6fab0e94bc",
+  "response": {
+    "id": "chatcmpl-315e410a-66ac-4336-afe9-9591f689be08",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**Company:** Mutiara Delima Agro Sdn. Bhd. (formerly known as Sejahtera Resources Sdn. Bhd.) – Private limited company, incorporated on 11 Apr 2023, currently **Active**. Operates in the **Agriculture** sector in Kuala Lumpur, focusing on oil‑palm plantation and fresh fruit bunch supply. Share capital is **RM250.0k**.  \n\n**Director & Shareholder:** The company has **4 directors** and **3 shareholders**. The largest shareholder is **Director 3** with **58.92 %** of the equity.  \n\n**Financials:** The latest audited figures are for FY 2024. No prior year data is available, so year‑on‑year revenue growth cannot be computed. Revenue was **RM74.30m**, gross profit **RM15.66m**, giving a **gross profit margin of 21.1 %**; operating profit was a loss of **RM2.53m**, yielding an **operating profit margin of –3.4 %**. Free cash flow was **RM‑6.64m**, indicating negative cash generation, and net debt (borrowings – cash) stood at **RM9.81m**.  \n\n**Litigation:** No court cases were recorded.  \n\n**Review Rating:** **2/5 – Low review priority**. The firm shows negative operating margin and free‑cash‑flow loss with modest net debt, despite an active status and no litigation.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "We need to produce five markdown paragraphs with headings. Let's extract data.\n\nCompany: name Mutiara Delima Agro Sdn. Bhd., former name Sejahtera Resources Sdn. Bhd. type Private limited company, incorporation date 2023-04-11, status Active, industry Agriculture, state Kuala Lumpur, nature of business \"Oil palm plantation and fresh fruit bunch supply\", share capital 250,000 (RM). Need format: RM250.0k? 250k is 250,000 => RM250.0k.\n\nDirectors: list 4 directors. So \"4 directors\". Shareholders: 3 shareholders. Largest shareholder is Director 3 with 58.92%. Provide percentage with two decimal places: 58.92%.\n\nFinancials: only one year 2024. No prior year, so cannot compute YoY growth. Must state that prior year absent. Compute gross profit margin and operating profit margin from statements (or we could recompute). Already given: gross profit margin 0.2107 => 21.1% (one decimal). operating profit margin -0.0341 => -3.4% (one decimal). Free cash flow is -6,643,956 => format RM-6.64m? RM-6.64m (RM-6.64m). Net debt = borrowings - cash = 20,462,654 - 10,649,316 = 9,813,338 => RM9.81m.\n\nWe need describe growth, decline, and positive or negative cash flow naturally. Since only one year, note no YoY growth data; operating profit negative; free cash flow negative; net debt positive.\n\nLitigation: cases empty, so \"No court cases were recorded.\"\n\nReview Rating: Need to assign based on rubric. Status Active, financial performance: revenue positive, gross profit positive, but operating profit negative, free cash flow negative, net debt moderate. No litigation. Mixed signals: negative operating margin, negative free cash flow, net debt. So likely 2/5 low priority? rubric: 2/5 for several material adverse signals such as declining performance, negative operating margin, negative free cash flow, substantial net debt, or material defendant litigation. Here we have negative operating margin, negative free cash flow, net debt of about RM9.8m relative to equity RM66m, debt/equity ratio ~0.15? Not huge. But still negative cash flow. So 2/5.\n\nWe need headings as markdown paragraphs with headings. Use **Company:** etc.\n\nLet's format amounts: RM250.0k; RM-6.64m; RM9.81m. Use one decimal for percentages, two decimals for shareholder percentages.\n\nWrite five paragraphs.\n\n"
+        }
+      }
+    ],
+    "created": 1795378978,
+    "model": "openai/gpt-oss-120b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": "on_demand",
+    "system_fingerprint": "fp_86dc843b12",
+    "usage": {
+      "completion_tokens": 891,
+      "prompt_tokens": 1847,
+      "total_tokens": 2738,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 568,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 512,
+        "image_tokens": null,
+        "text_tokens": null
+      },
+      "queue_time": 0.158084354,
+      "prompt_time": 0.109808986,
+      "completion_time": 2.188579218,
+      "total_time": 2.298388204
+    },
+    "usage_breakdown": null,
+    "x_groq": {
+      "id": "req_01m82et5egeert8qp62mwmhzsz",
+      "seed": 1438698364
+    }
+  }
+}
